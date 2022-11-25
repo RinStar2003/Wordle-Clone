@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Wordle-Clone
 //
 //  Created by мас on 23.11.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     let keyboardVC = KeyboardViewController()
     let rectanglesVC = RectanglesViewController()
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .systemGray6
         addViews()
     }
     

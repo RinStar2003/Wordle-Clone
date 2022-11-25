@@ -7,13 +7,15 @@
 
 import UIKit
 
+protocol GameViewControllerDataSource: AnyObject {
+    var currentGuesses: [[Character?]] { get }
+    
+    func boxColor(at indexPath: IndexPath) -> UIColor?
+}
+
 class GameViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let guesses: [[Character?]] = Array(
-    
-        repeating: Array(repeating: nil, count: 5),
-        count: 6
-    )
+    weak var datasource: GameViewControllerDataSource?
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -47,16 +49,21 @@ class GameViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
         ])
 
     }
+    
+    public func reloadData() {
+        collectionView.reloadData()
+    }
 }
 
 extension GameViewController {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
     
-        return guesses.count
+        return datasource?.currentGuesses.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let guesses = datasource?.currentGuesses ?? []
         return guesses[section].count
     }
     
@@ -65,10 +72,16 @@ extension GameViewController {
             fatalError()
         }
                 
-        cell.contentView.backgroundColor = nil
+        cell.contentView.backgroundColor = self.datasource?.boxColor(at: indexPath)
         
         cell.layer.borderColor = UIColor.systemGray3.cgColor
         cell.layer.borderWidth = 1
+        
+        let guesses = datasource?.currentGuesses ?? []
+        
+        if let letter = guesses[indexPath.section][indexPath.row] {
+            cell.configure(with: letter)
+        }
         
         return cell
     }

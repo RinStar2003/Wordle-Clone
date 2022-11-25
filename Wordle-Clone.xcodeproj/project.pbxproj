@@ -14,7 +14,7 @@
 		443680D8292E499A0007B464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443680D7292E499A0007B464 /* Assets.xcassets */; };
 		443680DB292E499A0007B464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443680D9292E499A0007B464 /* LaunchScreen.storyboard */; };
 		443680E6292E4B8E0007B464 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443680E5292E4B8E0007B464 /* KeyboardViewController.swift */; };
-		443680E8292E4BE50007B464 /* RectanglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443680E7292E4BE50007B464 /* RectanglesViewController.swift */; };
+		443680E8292E4BE50007B464 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443680E7292E4BE50007B464 /* GameViewController.swift */; };
 		44A323022930D1E300BBC763 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A323012930D1E300BBC763 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		443680DA292E499A0007B464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443680DC292E499A0007B464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443680E5292E4B8E0007B464 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		443680E7292E4BE50007B464 /* RectanglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglesViewController.swift; sourceTree = "<group>"; };
+		443680E7292E4BE50007B464 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		44A323012930D1E300BBC763 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 			children = (
 				443680D2292E49970007B464 /* MainViewController.swift */,
 				443680E5292E4B8E0007B464 /* KeyboardViewController.swift */,
-				443680E7292E4BE50007B464 /* RectanglesViewController.swift */,
+				443680E7292E4BE50007B464 /* GameViewController.swift */,
 				44A323012930D1E300BBC763 /* CollectionViewCell.swift */,
 			);
 			path = Controller;
@@ -175,7 +175,7 @@
 				443680CF292E49970007B464 /* AppDelegate.swift in Sources */,
 				44A323022930D1E300BBC763 /* CollectionViewCell.swift in Sources */,
 				443680D1292E49970007B464 /* SceneDelegate.swift in Sources */,
-				443680E8292E4BE50007B464 /* RectanglesViewController.swift in Sources */,
+				443680E8292E4BE50007B464 /* GameViewController.swift in Sources */,
 				443680E6292E4B8E0007B464 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     let keyboardVC = KeyboardViewController()
-    let rectanglesVC = RectanglesViewController()
+    let rectanglesVC = GameViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
